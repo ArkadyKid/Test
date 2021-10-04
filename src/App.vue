@@ -1,26 +1,30 @@
 <template>
   <div id="app" class="app">
     <app-timeline class="app__timeline"
-                  :counts="9"
-                  :process-count="3"
-                  :is-text-under="false"
-                  :is-text-center="true"
+                  :counts="4"
+                  :active-checkpoint="3"
     />
     <app-timeline class="app__timeline"
                   :counts="4"
-                  :process-count="3"
-                  :is-text-under="false"
+                  :active-checkpoint="3"
+                  :is-text-center-progress="true"
     />
     <app-timeline class="app__timeline"
-                  :counts="2"
-                  :process-count="1"
-                  :is-text-under="false"
+                  :counts="4"
+                  :active-checkpoint="3"
+                  :is-text-under="true"
+    />
+    <app-timeline class="app__timeline"
+                  :counts="4"
+                  :active-checkpoint="3"
+                  :is-text-under="true"
+                  :is-text-center-progress="true"
     />
   </div>
 </template>
 
 <script>
-import AppTimeline from "./components/timeline";
+import AppTimeline from './components/timeline';
 
 export default {
   name: 'App',
@@ -32,12 +36,12 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 40px;
+  gap: 180px;
 
-  &__timeline:not(:last-child) {
-    margin-bottom: 60px;
+  &__timeline {
+    grid-column: 1;
   }
 }
 </style>
