@@ -29,7 +29,7 @@
       ></div>
     </template>
 
-    <div class="timeline__options">
+    <fieldset class="timeline__options">
       <label class="timeline__option-label">
         <input class="timeline__option-checkbox"
                type="checkbox"
@@ -66,7 +66,7 @@
         >
         Active count
       </label>
-    </div>
+    </fieldset>
   </div>
 </template>
 
@@ -216,9 +216,12 @@ export default {
   }
 
   &__options {
+    margin: 0;
+    padding: 0;
     padding-top: 50px;
     display: grid;
     gap: 10px;
+    border: none;
   }
 
   &__option-label {
